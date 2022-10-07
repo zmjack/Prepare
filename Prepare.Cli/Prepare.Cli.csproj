@@ -18,7 +18,7 @@
     <Description>Prepare cli tools.</Description>
     <Copyright>Copyright © nstandard.net 2022-2022</Copyright>
     <PackageProjectUrl>https://github.com/zmjack/Prepare</PackageProjectUrl>
-    <Version>0.0.1.9</Version>
+    <Version>0.0.1.10</Version>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <PackageType>DotnetCliTool</PackageType>
     <PackAsTool>true</PackAsTool>
