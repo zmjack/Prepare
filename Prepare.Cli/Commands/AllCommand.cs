@@ -18,7 +18,7 @@ namespace Prepare.Cli
 
         public override void Run()
         {
-            var projectInfo = Container.ProjectInfo;
+            var projectInfo = Container.Project;
 
             if (projectInfo is null) throw new InvalidOperationException("No project information.");
 

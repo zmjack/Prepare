@@ -10,11 +10,11 @@ namespace Prepare.Cli
     {
         public static readonly Assembly ThisAssembly = Assembly.GetExecutingAssembly();
         public static readonly string CLI_VERSION = ThisAssembly.GetName().Version.ToString();
-        public static CmdContainer CmdContainer;
+        public static readonly CmdContainer CmdContainer = new("prepare", ThisAssembly);
 
         static void Main(string[] args)
         {
-            CmdContainer = new("prepare", ThisAssembly, ProjectInfo.GetFromDirectory(Directory.GetCurrentDirectory()));
+            CmdContainer.Project = Project.GetFromDirectory(Directory.GetCurrentDirectory());
 
             PrintWelcome();
             CmdContainer.PrintProjectInfo();
