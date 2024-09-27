@@ -51,7 +51,7 @@ namespace Prepare.Cli
             {
                 var method = factoryType.GetMethod(nameof(IDesignTimePrepareFactory.Prepare));
                 var factory = factoryType.CreateInstance();
-                method.Invoke(factory, new object[] { prepareProject, Arguments.OriginArgs });
+                method.Invoke(factory, [prepareProject, Arguments.OriginArgs]);
             }
         }
     }
