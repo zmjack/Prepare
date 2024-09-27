@@ -18,7 +18,7 @@
     <Description>Prepare cli tools.</Description>
     <Copyright>Copyright © nstandard.net 2022-2022</Copyright>
     <PackageProjectUrl>https://github.com/zmjack/Prepare</PackageProjectUrl>
-    <Version>0.0.4</Version>
+    <Version>0.0.4.1</Version>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <PackageType>DotnetCliTool</PackageType>
     <PackAsTool>true</PackAsTool>
@@ -37,7 +37,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="DotNetCli" Version="0.3.3" />
+    <PackageReference Include="DotNetCli" Version="0.4.0" />
     <PackageReference Include="NStandard" Version="0.82.0.1" />
     <PackageReference Include="NStandard.Runtime" Version="1.9.0" />
   </ItemGroup>
