@@ -1,7 +1,4 @@
-﻿using NStandard;
-using Prepare;
-
-namespace Prepare.Cli.Test
+﻿namespace Prepare.Cli.Test
 {
     public class PrepareFactory : IDesignTimePrepareFactory
     {

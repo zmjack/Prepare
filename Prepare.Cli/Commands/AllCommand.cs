@@ -3,8 +3,6 @@ using NStandard;
 using NStandard.Runtime;
 using System;
 using System.IO;
-using System.Linq;
-using System.Reflection;
 
 namespace Prepare.Cli
 {
@@ -12,6 +10,9 @@ namespace Prepare.Cli
     public class AllCommand : Command
     {
         public AllCommand(CmdContainer container, string[] args) : base(container, args) { }
+
+        [CmdProperty("config", Abbreviation = "c", Description = "Specify configuration.")]
+        public string Config { get; set; } = "Debug";
 
         [CmdProperty("verbose", Abbreviation = "verb", Description = "Output more information for building.")]
         public bool Verbose { get; set; } = false;
@@ -23,7 +24,7 @@ namespace Prepare.Cli
             if (projectInfo is null) throw new InvalidOperationException("No project information.");
 
             var project = projectInfo.Value;
-            var targetBinFolder = Path.GetFullPath($"{project.ProjectRoot}/bin/Debug/{project.TargetFramework}");
+            var targetBinFolder = Path.GetFullPath($"{project.ProjectRoot}/bin/{Config}/{project.TargetFramework}");
             var targetAssemblyName = project.AssemblyName;
             var assemblyContext = new AssemblyContext(DotNetFramework.Parse(project.TargetFramework), project.Sdk);
             assemblyContext.LoadMain($"{targetBinFolder}/{targetAssemblyName}.dll");
