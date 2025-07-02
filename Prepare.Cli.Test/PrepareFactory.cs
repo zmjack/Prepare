@@ -1,9 +1,8 @@
-﻿namespace Prepare.Cli.Test
+﻿namespace Prepare.Cli.Test;
+
+public class PrepareFactory : IDesignTimePrepareFactory
 {
-    public class PrepareFactory : IDesignTimePrepareFactory
+    public void Prepare(PrepareProject project, string[] args)
     {
-        public void Prepare(PrepareProject project, string[] args)
-        {
-        }
     }
 }

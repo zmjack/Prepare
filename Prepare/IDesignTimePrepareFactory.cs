@@ -1,7 +1,6 @@
-﻿namespace Prepare
+﻿namespace Prepare;
+
+public interface IDesignTimePrepareFactory
 {
-    public interface IDesignTimePrepareFactory
-    {
-        void Prepare(PrepareProject project, string[] args);
-    }
+    void Prepare(PrepareProject project, string[] args);
 }
