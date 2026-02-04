@@ -8,8 +8,8 @@ namespace Prepare.Cli;
 
 public class Program
 {
-    public static readonly Assembly ThisAssembly = Assembly.GetExecutingAssembly();
     public static readonly string CLI_VERSION = ThisAssembly.GetName().Version.ToString();
+    public static readonly Assembly ThisAssembly = Assembly.GetExecutingAssembly();
     public static readonly CmdContainer CmdContainer = new("prepare", ThisAssembly);
 
     static void Main(string[] args)
